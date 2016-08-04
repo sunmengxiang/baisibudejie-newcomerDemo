@@ -1,0 +1,36 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐 -- MJ
+//
+//  Created by 孙梦翔 on 16/7/28.
+//  Copyright © 2016年 孙梦翔. All rights reserved.
+
+//  此 PCH 文件放置都会用到的 category 和 常使用的宏
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define MJScreenW  [UIScreen mainScreen].bounds.size.width
+
+#define MJScreenH  [UIScreen mainScreen].bounds.size.height
+
+#define MJColor(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+
+#define MJGloabalBgColor MJColor(223,223,223)
+
+#define MJSexTypeMale @"m"
+
+#define MJSexTypeFemale @"fm"
+
+
+#import "UIView+MJframe.h"
+#import "MJConst.h"
+#import "UIImage+MJCircleImage.h"
+#import "UIBarButtonItem+MJBarButtonItem.h"
+#import "UIImageView+MJCircleImageView.h"
+
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MJShowPictureViewController">
+            <connections>
+                <outlet property="progressView" destination="19X-GE-JAC" id="qvw-bX-zQD"/>
+                <outlet property="scrollView" destination="ZL1-in-NlL" id="AwB-Wu-f86"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="312"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZL1-in-NlL">
+                    <rect key="frame" x="0.0" y="0.0" width="360" height="312"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZA-qK-slr">
+                    <rect key="frame" x="10" y="30" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="HMI-uO-Wf2"/>
+                        <constraint firstAttribute="width" constant="36" id="QGL-7F-09w"/>
+                    </constraints>
+                    <state key="normal" image="show_image_back_icon"/>
+                    <connections>
+                        <action selector="backClick" destination="-1" eventType="touchUpInside" id="TTI-MK-rf2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBw-bV-xwO">
+                    <rect key="frame" x="228" y="272" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="saveClick" destination="-1" eventType="touchUpInside" id="g9i-Gm-bem"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QO1-Ig-mfb">
+                    <rect key="frame" x="294" y="272" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="NT4-bQ-MMJ"/>
+                        <constraint firstAttribute="width" constant="46" id="dVL-0S-IDP"/>
+                    </constraints>
+                    <state key="normal" title="转发">
+                        <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19X-GE-JAC" customClass="MJProgressVIew">
+                    <rect key="frame" x="105" y="81" width="150" height="150"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Y44-8o-PyX"/>
+                        <constraint firstAttribute="height" constant="150" id="tZy-5h-AHh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ZL1-in-NlL" secondAttribute="bottom" id="3go-hP-Wfc"/>
+                <constraint firstAttribute="trailing" secondItem="ZL1-in-NlL" secondAttribute="trailing" id="54c-F1-510"/>
+                <constraint firstItem="CZA-qK-slr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="9Ft-2b-Lyf"/>
+                <constraint firstItem="QO1-Ig-mfb" firstAttribute="leading" secondItem="eBw-bV-xwO" secondAttribute="trailing" constant="20" id="FFT-jq-KuJ"/>
+                <constraint firstItem="eBw-bV-xwO" firstAttribute="width" secondItem="QO1-Ig-mfb" secondAttribute="width" id="KoS-DO-xFr"/>
+                <constraint firstItem="19X-GE-JAC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NzM-Rf-45C"/>
+                <constraint firstItem="ZL1-in-NlL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QbF-em-N1s"/>
+                <constraint firstAttribute="trailing" secondItem="QO1-Ig-mfb" secondAttribute="trailing" constant="20" id="dSv-cL-C7O"/>
+                <constraint firstAttribute="bottom" secondItem="eBw-bV-xwO" secondAttribute="bottom" constant="10" id="gdh-QU-Gbk"/>
+                <constraint firstItem="ZL1-in-NlL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hAd-xP-jj4"/>
+                <constraint firstItem="CZA-qK-slr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="ios-bO-rQc"/>
+                <constraint firstItem="eBw-bV-xwO" firstAttribute="height" secondItem="QO1-Ig-mfb" secondAttribute="height" id="jQE-pk-30u"/>
+                <constraint firstAttribute="bottom" secondItem="QO1-Ig-mfb" secondAttribute="bottom" constant="10" id="jme-rf-zeb"/>
+                <constraint firstItem="19X-GE-JAC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="mPJ-Tn-yz1"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="71" y="112"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="show_image_back_icon" width="35" height="35"/>
+    </resources>
+</document>
