@@ -11,5 +11,13 @@
 	- pod 'MJRefresh'  
 	- pod 'pop'  
 	- pod 'SDWebImage'  
-	- pod 'SVProgressHUD'  
+	- pod 'SVProgressHUD'    
+### 完成的功能如下：   
+
+![image](https://github.com/sunmengxiang/baisibudejie-newcomerDemo/blob/master/photo/topics.png)
+![image](https://github.com/sunmengxiang/baisibudejie-newcomerDemo/blob/master/photo/recommend.png)
+![image](https://github.com/sunmengxiang/baisibudejie-newcomerDemo/blob/master/photo/comment.png)  
+![image](https://github.com/sunmengxiang/baisibudejie-newcomerDemo/blob/master/photo/publish.png)
+![image](https://github.com/sunmengxiang/baisibudejie-newcomerDemo/blob/master/photo/register.png)  
+![image](https://github.com/sunmengxiang/baisibudejie-newcomerDemo/blob/master/photo/login.png)
 ![image](https://github.com/sunmengxiang/baisibudejie-newcomerDemo/blob/master/photo/Mine.png)
