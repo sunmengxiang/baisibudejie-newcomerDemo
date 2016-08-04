@@ -12,3 +12,4 @@
 	- pod 'pop'  
 	- pod 'SDWebImage'  
 	- pod 'SVProgressHUD'  
+![image](https://github.com/sunmengxiang/baisibudejie-newcomerDemo/blob/master/photo/Mine.png)
