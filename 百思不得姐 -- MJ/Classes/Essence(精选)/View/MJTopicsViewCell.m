@@ -41,6 +41,7 @@
 {
     [super prepareForReuse];
     [self.topicsVideoView.videoView resetVideoPlay];
+    [self.topicsVideoView videoResetImage];
     [self.topicsVoiceView voiceResetImage];
     [self.topicsPictureView pictureResetImage];
 }
