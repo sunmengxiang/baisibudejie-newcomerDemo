@@ -27,9 +27,11 @@ UIKIT_EXTERN CGFloat const MJTopicsCellMargin;
 
 /** 精华-- 图片 Topics--允许的最大高度 **/
 UIKIT_EXTERN CGFloat const MJTopicsPictureMaxHeight;
-
+/** 精华-- 视频、声音 Topics--允许的最大高度 **/
+UIKIT_EXTERN CGFloat const MJTopicsVideoMaxHeight;
 /** 精华-- 图片 Topics--图片超过最大高度后转为这个高度 **/
 UIKIT_EXTERN CGFloat const MJTopicsPicturePreferHeight;
-
+/** 精华-- 图片 Topics--视频及声音图片超过最大高度后转为这个高度 **/
+UIKIT_EXTERN CGFloat const MJTopicsVideoPreferHeight;
 /** 精华-- 帖子评论header 文字大小 **/
 UIKIT_EXTERN CGFloat const MJTopicsHeaderTitleFontSize;

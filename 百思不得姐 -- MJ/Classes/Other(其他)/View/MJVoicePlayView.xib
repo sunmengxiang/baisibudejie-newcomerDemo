@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="YCE-ju-RWS" customClass="MJVoicePlayView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSZ-fC-1FR" userLabel="playOrPauseButton">
+                    <rect key="frame" x="10" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="JaJ-af-aaP"/>
+                        <constraint firstAttribute="height" constant="44" id="RAg-RA-EL7"/>
+                    </constraints>
+                    <state key="normal" image="kr-video-player-play"/>
+                    <state key="selected" image="kr-video-player-pause"/>
+                    <connections>
+                        <action selector="playOrPauseClick:" destination="YCE-ju-RWS" eventType="touchUpInside" id="cec-PC-AUI"/>
+                    </connections>
+                </button>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wAj-Lo-xV5">
+                    <rect key="frame" x="62" y="10" width="195" height="31"/>
+                    <connections>
+                        <action selector="slderTouchEndWithLabelChange:" destination="YCE-ju-RWS" eventType="valueChanged" id="xcd-nn-N3T"/>
+                        <action selector="sliderTouchEnd:" destination="YCE-ju-RWS" eventType="touchUpInside" id="bh8-9w-sGR"/>
+                        <action selector="sliderTouchStart:" destination="YCE-ju-RWS" eventType="touchDown" id="iKq-U2-1zY"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00/05:15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jun-pe-fZV" userLabel="timeLabel">
+                    <rect key="frame" x="265" y="17" width="100" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="PcJ-2m-Dgy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="LSZ-fC-1FR" firstAttribute="leading" secondItem="YCE-ju-RWS" secondAttribute="leading" constant="10" id="0FS-bi-4ub"/>
+                <constraint firstItem="jun-pe-fZV" firstAttribute="leading" secondItem="wAj-Lo-xV5" secondAttribute="trailing" constant="10" id="Ecx-s6-8Ge"/>
+                <constraint firstAttribute="trailing" secondItem="jun-pe-fZV" secondAttribute="trailing" constant="10" id="alO-p3-Sd5"/>
+                <constraint firstItem="wAj-Lo-xV5" firstAttribute="centerY" secondItem="YCE-ju-RWS" secondAttribute="centerY" id="mmj-98-pZ1"/>
+                <constraint firstItem="jun-pe-fZV" firstAttribute="centerY" secondItem="YCE-ju-RWS" secondAttribute="centerY" id="qGb-AE-iC7"/>
+                <constraint firstItem="LSZ-fC-1FR" firstAttribute="top" secondItem="YCE-ju-RWS" secondAttribute="top" id="vmJ-lm-Xcm"/>
+                <constraint firstItem="wAj-Lo-xV5" firstAttribute="leading" secondItem="LSZ-fC-1FR" secondAttribute="trailing" constant="10" id="yvM-Qm-yfK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="playOrPauseButton" destination="LSZ-fC-1FR" id="7qC-Qw-7UY"/>
+                <outlet property="timeLabel" destination="jun-pe-fZV" id="j6c-Yf-pck"/>
+                <outlet property="timeSlider" destination="wAj-Lo-xV5" id="cnl-VR-p1N"/>
+            </connections>
+            <point key="canvasLocation" x="454.5" y="-112"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="kr-video-player-pause" width="12" height="19"/>
+        <image name="kr-video-player-play" width="18" height="20"/>
+    </resources>
+</document>

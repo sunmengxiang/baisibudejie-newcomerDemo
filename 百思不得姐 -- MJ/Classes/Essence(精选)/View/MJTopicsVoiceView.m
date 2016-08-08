@@ -9,7 +9,7 @@
 #import "MJTopicsVoiceView.h"
 #import "MJProgressVIew.h"
 #import "MJTopics.h"
-
+#import "MJVoicePlayView.h"
 #import <UIImageView+WebCache.h>
 #import <AVFoundation/AVFoundation.h>
 @interface MJTopicsVoiceView()<AVAudioPlayerDelegate>
@@ -21,7 +21,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (weak, nonatomic) IBOutlet MJProgressVIew *progressView;
 
-@property(nonatomic,strong) AVAudioPlayer * voicePlayer;
+/* 声音view */
+@property (weak ,nonatomic) MJVoicePlayView * voiceView;
 @end
 @implementation MJTopicsVoiceView
 
@@ -47,6 +48,29 @@
     NSInteger playSecond = topics.videotime % 60;
     self.playTimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd",playMinute,playSecond];
     self.playCountLabel.text = [NSString stringWithFormat:@"播放:%zd次",topics.playcount];
+    
+}
+#pragma mark - 点击播放键
+- (IBAction)playClick:(UIButton *)sender
+{
+    self.playButton.hidden = YES;
+    MJVoicePlayView * voiceView = [MJVoicePlayView voicePlayView];
+    self.voiceView = voiceView;
+    self.voiceView.frame = CGRectMake(0, self.topics.pictureFrame.size.height - 44, self.width, 44);
+  
+    self.voiceView.playerItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:self.topics.voiceuri]];
+    [self addSubview:self.voiceView];
+    
+}
+- (void)voiceResetImage
+{
+    [self.pictureView setImage:nil];
+    self.playCountLabel = nil;
+    self.playTimeLabel = nil;
+    self.progressView = nil;
+    self.playButton = nil;
+    self.progressView = nil;
+    [self removeFromSuperview];
     
 }
 @end

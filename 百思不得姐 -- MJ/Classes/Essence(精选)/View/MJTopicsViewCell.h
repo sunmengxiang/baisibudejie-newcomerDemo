@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class MJTopics;
+
 @interface MJTopicsViewCell : UITableViewCell
 
 /* 帖子数据 */

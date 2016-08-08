@@ -59,25 +59,22 @@
             CGFloat picY = MJTopicsCellTextY + textHeight + MJTopicsCellMargin;
             self.pictureFrame = CGRectMake(MJTopicsCellMargin, picY, maxSize.width, height);
         }
-        else if (self.type == MJTopicsTypeVoice)
+//        是否声音/视频帖子
+        else if (self.type != MJTopicsTypeWord)
         {
-            //             拿到图片的大小，将其转换为宽度跟图片控件宽度一致，此时的等比例的高度就是我们所要
-            CGFloat height = self.height * maxSize.width / self.width;
-
-            _cellHeight += MJTopicsCellMargin + height;
-            CGFloat picY = MJTopicsCellTextY + textHeight + MJTopicsCellMargin;
-            self.pictureFrame = CGRectMake(MJTopicsCellMargin, picY, maxSize.width, height);
-        }
-        else if (self.type == MJTopicsTypeVideo)
-        {
-            //             拿到图片的大小，将其转换为宽度跟图片控件宽度一致，此时的等比例的高度就是我们所要
+            //   拿到图片的大小，将其转换为宽度跟图片控件宽度一致，此时的等比例的高度就是我们所要
             CGFloat height = self.height * maxSize.width / self.width;
             
+            if (height > MJTopicsVideoMaxHeight) {
+                height = MJTopicsVideoPreferHeight;
+            }
+
             _cellHeight += MJTopicsCellMargin + height;
             CGFloat picY = MJTopicsCellTextY + textHeight + MJTopicsCellMargin;
             self.pictureFrame = CGRectMake(MJTopicsCellMargin, picY, maxSize.width, height);
         }
-
+ 
+// 如果有热门评论
         if (self.top_cmt != nil)
         {
             NSString * nameWithContent = [self.top_cmt.user.username stringByAppendingString:self.top_cmt.content];

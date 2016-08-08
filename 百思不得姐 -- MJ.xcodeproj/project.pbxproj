@@ -10,6 +10,10 @@
 		BCEFCC1D07643F21E16F9252 /* libPods-百思不得姐 -- MJ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A762753A60134230320DCBB4 /* libPods-百思不得姐 -- MJ.a */; };
 		FE1ABD981D50283100796ADD /* MJShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1ABD961D50283100796ADD /* MJShowPictureViewController.m */; };
 		FE1ABD991D50283100796ADD /* MJShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1ABD971D50283100796ADD /* MJShowPictureViewController.xib */; };
+		FE1FBF3D1D572DC700EA6BCE /* MJVideoPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1FBF3C1D572DC700EA6BCE /* MJVideoPlayView.m */; };
+		FE1FBF3F1D572DD300EA6BCE /* MJVideoPlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1FBF3E1D572DD300EA6BCE /* MJVideoPlayView.xib */; };
+		FE74A0261D58BA5400EAD440 /* MJVoicePlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE74A0251D58BA5400EAD440 /* MJVoicePlayView.m */; };
+		FE74A0281D58BA5D00EAD440 /* MJVoicePlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE74A0271D58BA5D00EAD440 /* MJVoicePlayView.xib */; };
 		FE7A09971D4A42E000529B8C /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7A09961D4A42E000529B8C /* Foundation+Log.m */; };
 		FE7A099A1D4A54CD00529B8C /* MJSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7A09991D4A54CD00529B8C /* MJSettingViewController.m */; };
 		FE7A09A01D4A580F00529B8C /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7A099F1D4A580F00529B8C /* MJConst.m */; };
@@ -57,6 +61,7 @@
 		FEC260061D49940A00FFA266 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEC260051D49940A00FFA266 /* Assets.xcassets */; };
 		FEC260091D49940A00FFA266 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEC260071D49940A00FFA266 /* LaunchScreen.storyboard */; };
 		FEC260141D49940A00FFA266 /* _________MJTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC260131D49940A00FFA266 /* _________MJTests.m */; };
+		FED69C081D577C6E00878C81 /* MJFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED69C071D577C6E00878C81 /* MJFullViewController.m */; };
 		FEFA2F421D5204B2001BFC47 /* MJTopicsVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFA2F411D5204B2001BFC47 /* MJTopicsVoiceView.m */; };
 		FEFA2F461D520505001BFC47 /* MJTopicsVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEFA2F451D520505001BFC47 /* MJTopicsVoiceView.xib */; };
 		FEFA2F861D52118B001BFC47 /* MJSquares.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFA2F851D52118B001BFC47 /* MJSquares.m */; };
@@ -90,6 +95,12 @@
 		FE1ABD951D50283100796ADD /* MJShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJShowPictureViewController.h; sourceTree = "<group>"; };
 		FE1ABD961D50283100796ADD /* MJShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJShowPictureViewController.m; sourceTree = "<group>"; };
 		FE1ABD971D50283100796ADD /* MJShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJShowPictureViewController.xib; sourceTree = "<group>"; };
+		FE1FBF3B1D572DC700EA6BCE /* MJVideoPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJVideoPlayView.h; sourceTree = "<group>"; };
+		FE1FBF3C1D572DC700EA6BCE /* MJVideoPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJVideoPlayView.m; sourceTree = "<group>"; };
+		FE1FBF3E1D572DD300EA6BCE /* MJVideoPlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJVideoPlayView.xib; sourceTree = "<group>"; };
+		FE74A0241D58BA5400EAD440 /* MJVoicePlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJVoicePlayView.h; sourceTree = "<group>"; };
+		FE74A0251D58BA5400EAD440 /* MJVoicePlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJVoicePlayView.m; sourceTree = "<group>"; };
+		FE74A0271D58BA5D00EAD440 /* MJVoicePlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJVoicePlayView.xib; sourceTree = "<group>"; };
 		FE7A09961D4A42E000529B8C /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		FE7A09981D4A54CD00529B8C /* MJSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJSettingViewController.h; sourceTree = "<group>"; };
 		FE7A09991D4A54CD00529B8C /* MJSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJSettingViewController.m; sourceTree = "<group>"; };
@@ -173,6 +184,8 @@
 		FEC2600F1D49940A00FFA266 /* 百思不得姐 -- MJTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐 -- MJTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEC260131D49940A00FFA266 /* _________MJTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_________MJTests.m"; sourceTree = "<group>"; };
 		FEC260151D49940A00FFA266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FED69C061D577C6E00878C81 /* MJFullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFullViewController.h; sourceTree = "<group>"; };
+		FED69C071D577C6E00878C81 /* MJFullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFullViewController.m; sourceTree = "<group>"; };
 		FEFA2F401D5204B2001BFC47 /* MJTopicsVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTopicsVoiceView.h; sourceTree = "<group>"; };
 		FEFA2F411D5204B2001BFC47 /* MJTopicsVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTopicsVoiceView.m; sourceTree = "<group>"; };
 		FEFA2F451D520505001BFC47 /* MJTopicsVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJTopicsVoiceView.xib; sourceTree = "<group>"; };
@@ -491,6 +504,14 @@
 			children = (
 				FEA497121D49D3DC00DEF8A7 /* MJTabBar.h */,
 				FEA497131D49D3DC00DEF8A7 /* MJTabBar.m */,
+				FE1FBF3B1D572DC700EA6BCE /* MJVideoPlayView.h */,
+				FE1FBF3C1D572DC700EA6BCE /* MJVideoPlayView.m */,
+				FE1FBF3E1D572DD300EA6BCE /* MJVideoPlayView.xib */,
+				FE74A0241D58BA5400EAD440 /* MJVoicePlayView.h */,
+				FE74A0251D58BA5400EAD440 /* MJVoicePlayView.m */,
+				FE74A0271D58BA5D00EAD440 /* MJVoicePlayView.xib */,
+				FED69C061D577C6E00878C81 /* MJFullViewController.h */,
+				FED69C071D577C6E00878C81 /* MJFullViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -689,6 +710,8 @@
 				FEB118711D4BA7B90095302F /* MJTopicsViewCell.xib in Resources */,
 				FEA4971C1D49FAF000DEF8A7 /* MJPublishViewController.xib in Resources */,
 				FE1ABD991D50283100796ADD /* MJShowPictureViewController.xib in Resources */,
+				FE74A0281D58BA5D00EAD440 /* MJVoicePlayView.xib in Resources */,
+				FE1FBF3F1D572DD300EA6BCE /* MJVideoPlayView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,6 +777,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1FBF3D1D572DC700EA6BCE /* MJVideoPlayView.m in Sources */,
 				FEFA2F421D5204B2001BFC47 /* MJTopicsVoiceView.m in Sources */,
 				FEA4970C1D49B6CB00DEF8A7 /* MJTabBarViewController.m in Sources */,
 				FE7A09AD1D4B5B3200529B8C /* MJTopicsViewController.m in Sources */,
@@ -795,10 +819,12 @@
 				FEB118771D4C98B70095302F /* UIImageView+MJCircleImageView.m in Sources */,
 				FEA497261D4A3ABC00DEF8A7 /* MJRecommendViewCell.m in Sources */,
 				FEA4971A1D49F14300DEF8A7 /* UIBarButtonItem+MJBarButtonItem.m in Sources */,
+				FED69C081D577C6E00878C81 /* MJFullViewController.m in Sources */,
 				FEA497081D49B6CB00DEF8A7 /* MJMineTableViewController.m in Sources */,
 				FEB118741D4C716E0095302F /* UIImage+MJCircleImage.m in Sources */,
 				FE89577A1D517FA400374EFD /* MJCategoryCell.m in Sources */,
 				FEB1187F1D4CB4270095302F /* MJTopicsVideoView.m in Sources */,
+				FE74A0261D58BA5400EAD440 /* MJVoicePlayView.m in Sources */,
 				FEA4970D1D49B6CB00DEF8A7 /* MJPublishViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

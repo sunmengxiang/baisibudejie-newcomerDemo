@@ -79,6 +79,17 @@
     self.gifLogo.hidden = !topics.isGif;
     self.seeBigPictureButton.hidden = !topics.bigPicture;
     
+}
+#pragma mark - 从缓存池拿出来时，需清空上一个数据，否则莫名子控件会乱入
+- (void)pictureResetImage
+{
+    [self.pictureImageView setImage:nil];
+    self.pictureImageView = nil;
+    self.gifLogo = nil;
+    self.progressView = nil;
+    self.seeBigPictureButton = nil;
+    
+    [self removeFromSuperview];
     
 }
 

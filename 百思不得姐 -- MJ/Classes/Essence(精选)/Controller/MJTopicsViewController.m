@@ -9,6 +9,9 @@
 #import "MJTopicsViewController.h"
 #import "MJTopics.h"
 #import "MJTopicsViewCell.h"
+#import "MJVideoPlayView.h"
+#import "MJTopicsVideoView.h"
+#import "MJFullViewController.h"
 #import "MJCommentsViewController.h"
 #import <MJRefresh.h>
 #import <MJExtension.h>
@@ -42,6 +45,7 @@
 {
     return [self.parentViewController.navigationItem.title isEqualToString:@"精选"]?@"list":@"newlist";
 }
+static NSString *topicsCellID = @"topicsCell";
 - (void)setUpTableView
 {
     
@@ -55,6 +59,8 @@
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MJTopicsViewCell class]) bundle: [NSBundle mainBundle]] forCellReuseIdentifier:topicsCellID];
 }
 - (void)setUpRefresh
 {
@@ -123,14 +129,13 @@
     return self.topicsArr.count;
 }
 
-static NSString *topicsCellID = @"topicsCell";
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MJTopicsViewCell *cell = [MJTopicsViewCell cellWithTableView:tableView];
     
- 
     cell.topics = self.topicsArr[indexPath.row];
-
+    
     [cell layoutIfNeeded];
     
     return cell;
@@ -154,4 +159,10 @@ static NSString *topicsCellID = @"topicsCell";
     commentVc.topics = self.topicsArr[indexPath.row];
     [self.navigationController pushViewController:commentVc animated:YES];
 }
+
+
+
+
+
+
 @end

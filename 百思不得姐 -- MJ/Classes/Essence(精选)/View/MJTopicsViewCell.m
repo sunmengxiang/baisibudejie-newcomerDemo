@@ -10,6 +10,7 @@
 #import "MJTopics.h"
 #import "MJCommentUsers.h"
 #import "MJComments.h"
+#import "MJVideoPlayView.h"
 #import "MJTopicsPictureView.h"
 #import "MJTopicsVideoView.h"
 #import "MJTopicsVoiceView.h"
@@ -26,9 +27,23 @@
 @property (weak, nonatomic) IBOutlet UIButton *repostButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 
+/* videoView */
+@property (weak ,nonatomic) MJTopicsVideoView * topicsVideoView;
+/* voiceView */
+@property (weak ,nonatomic) MJTopicsVoiceView * topicsVoiceView;
+/* pictureView */
+@property (weak ,nonatomic) MJTopicsPictureView * topicsPictureView;
+
+
 @end
 @implementation MJTopicsViewCell
-
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+    [self.topicsVideoView.videoView resetVideoPlay];
+    [self.topicsVoiceView voiceResetImage];
+    [self.topicsPictureView pictureResetImage];
+}
 - (void)awakeFromNib {
     [super awakeFromNib];
     
@@ -48,9 +63,8 @@ static NSString *topicsCellID = @"topicsCell";
     if (cell == nil)
     {
         cell = [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil]lastObject];
+        
     }
-    
-
     return cell;
 }
 + (instancetype)topicsViewCell
@@ -58,11 +72,8 @@ static NSString *topicsCellID = @"topicsCell";
     return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil]lastObject];;
 }
 - (void)setTopics:(MJTopics *)topics
-{
-    
+{    
     _topics = topics;
-
-
     [self.iconImageView circleImageViewWithUrl:topics.profile_image];
     
     self.nameLabel.text = topics.name;
@@ -80,27 +91,29 @@ static NSString *topicsCellID = @"topicsCell";
         MJTopicsPictureView * pictureView = [MJTopicsPictureView topicsPictureView];
         pictureView.frame = topics.pictureFrame;
         pictureView.topics = topics;
+        self.topicsPictureView = pictureView;
         [self addSubview:pictureView];
     }
-    if (topics.type == MJTopicsTypeVideo)
+    else if (topics.type == MJTopicsTypeVideo)
     {
         MJTopicsVideoView * videoView = [MJTopicsVideoView topicsVideoView];
         videoView.topics = topics;
+        self.topicsVideoView = videoView;
         videoView.frame = topics.pictureFrame;
+        
         [self addSubview:videoView];
     }
-    if (topics.type == MJTopicsTypeVoice)
+    else if (topics.type == MJTopicsTypeVoice)
     {
         MJTopicsVoiceView * voiceView = [MJTopicsVoiceView topicsVoiceView];
         voiceView.topics = topics;
+        self.topicsVoiceView = voiceView;
         voiceView.frame = topics.pictureFrame;
         [self addSubview:voiceView];
     }
     
-    
     if (self.topics.top_cmt.content.length != 0)
     {
-        
 //        创建装热评label 的 view
         UIView * labelView = [[UIView alloc]init];
         labelView.backgroundColor = MJColor(177,177, 177);
@@ -144,8 +157,6 @@ static NSString *topicsCellID = @"topicsCell";
         
         [labelView addSubview:top_cmtLabel];
         [self.contentView addSubview:labelView];
-//        [self.contentView addSubview:top_cmtLabel];
-       
     }
     
     
@@ -159,4 +170,5 @@ static NSString *topicsCellID = @"topicsCell";
     [super setFrame:frame];
     
 }
+
 @end

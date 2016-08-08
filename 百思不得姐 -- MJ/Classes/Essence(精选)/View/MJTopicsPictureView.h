@@ -12,4 +12,5 @@
 /* 帖子数据 */
 @property (strong ,nonatomic)  MJTopics * topics;
 + (instancetype)topicsPictureView;
+- (void)pictureResetImage;
 @end

@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 @class MJTopics;
+@class MJVideoPlayView;
 @interface MJTopicsVoiceView : UIView
 /* 帖子数据 */
 @property (strong ,nonatomic)  MJTopics * topics;
-
+@property(weak,nonatomic) MJVideoPlayView * videoView;
 + (instancetype)topicsVoiceView;
+- (void)voiceResetImage;
 @end

@@ -51,6 +51,9 @@
                     <state key="normal" image="playButtonPlay" backgroundImage="playButton"/>
                     <state key="selected" image="playButtonPause" backgroundImage="playButtonClick"/>
                     <state key="highlighted" backgroundImage="playButtonClick"/>
+                    <connections>
+                        <action selector="playClick:" destination="6it-aZ-97Q" eventType="touchUpInside" id="Qsr-Mz-dkf"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="879-F5-LWj" userLabel="progressView" customClass="MJProgressVIew">
                     <rect key="frame" x="109" y="87" width="100" height="100"/>
@@ -67,19 +70,31 @@
                 <constraint firstAttribute="bottom" secondItem="Ruf-eR-3LQ" secondAttribute="bottom" id="EXA-MR-Ssu"/>
                 <constraint firstItem="Ruf-eR-3LQ" firstAttribute="top" secondItem="6it-aZ-97Q" secondAttribute="top" id="Ilt-Q2-Cqm"/>
                 <constraint firstItem="Rqe-HP-igq" firstAttribute="centerY" secondItem="6it-aZ-97Q" secondAttribute="centerY" id="Krc-UO-jLw"/>
+                <constraint firstItem="879-F5-LWj" firstAttribute="centerY" secondItem="6it-aZ-97Q" secondAttribute="centerY" id="ME2-Pt-05a"/>
                 <constraint firstAttribute="trailing" secondItem="Vvs-lW-Hki" secondAttribute="trailing" id="MKf-Fg-TWz"/>
                 <constraint firstItem="aAh-nc-YMX" firstAttribute="leading" secondItem="6it-aZ-97Q" secondAttribute="leading" id="Npj-Wf-0s3"/>
+                <constraint firstItem="Rqe-HP-igq" firstAttribute="centerY" secondItem="6it-aZ-97Q" secondAttribute="centerY" id="OYR-h8-bNC"/>
                 <constraint firstAttribute="bottom" secondItem="Vvs-lW-Hki" secondAttribute="bottom" id="OgB-Pa-SSK"/>
                 <constraint firstItem="879-F5-LWj" firstAttribute="centerX" secondItem="6it-aZ-97Q" secondAttribute="centerX" id="WAP-3D-JCJ"/>
                 <constraint firstItem="Rqe-HP-igq" firstAttribute="centerX" secondItem="6it-aZ-97Q" secondAttribute="centerX" id="aKc-38-AF1"/>
                 <constraint firstAttribute="bottom" secondItem="aAh-nc-YMX" secondAttribute="bottom" id="cIW-MA-Rmb"/>
+                <constraint firstAttribute="bottom" secondItem="879-F5-LWj" secondAttribute="bottom" constant="50" id="efj-c8-S1w"/>
                 <constraint firstItem="Rn2-Bd-4NW" firstAttribute="centerX" secondItem="6it-aZ-97Q" secondAttribute="centerX" id="mMt-Em-Rqa"/>
+                <constraint firstAttribute="bottom" secondItem="Rqe-HP-igq" secondAttribute="bottom" constant="50" id="puh-3S-nJM"/>
                 <constraint firstAttribute="trailing" secondItem="Ruf-eR-3LQ" secondAttribute="trailing" id="tPN-k1-kjM"/>
                 <constraint firstItem="Rn2-Bd-4NW" firstAttribute="top" secondItem="6it-aZ-97Q" secondAttribute="top" constant="20" id="wbF-DZ-GLW"/>
                 <constraint firstItem="Ruf-eR-3LQ" firstAttribute="leading" secondItem="6it-aZ-97Q" secondAttribute="leading" id="zqY-zK-5XK"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="1A6-pj-Itu"/>
+                    <exclude reference="efj-c8-S1w"/>
+                    <exclude reference="Krc-UO-jLw"/>
+                    <exclude reference="puh-3S-nJM"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="pictureView" destination="Ruf-eR-3LQ" id="RPp-Dg-5dX"/>
                 <outlet property="playButton" destination="Rqe-HP-igq" id="5Hd-FV-9ca"/>

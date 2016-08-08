@@ -14,9 +14,11 @@ CGFloat const MJTopicsCellMargin = 10;
 
 /** 精华-- 图片 Topics--允许的最大高度 **/
 CGFloat const MJTopicsPictureMaxHeight = 500;
-
+/** 精华-- 视频、声音 Topics--允许的最大高度 **/
+CGFloat const MJTopicsVideoMaxHeight = 250;
 /** 精华-- 图片 Topics--图片超过最大高度后转为这个高度 **/
 CGFloat const MJTopicsPicturePreferHeight = 350;
-
+/** 精华-- 图片 Topics--视频及声音图片超过最大高度后转为这个高度 **/
+CGFloat const MJTopicsVideoPreferHeight  = 250;
 /** 精华-- 帖子评论header 文字大小 **/
 CGFloat const MJTopicsHeaderTitleFontSize = 13;
